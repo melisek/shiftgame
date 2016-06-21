@@ -1,0 +1,7 @@
+Márk;10;78;
+Névtelen;11;79;
+Névtelen;10;79;
+Bence;10;83;
+Józsi;14;81;
+Névtelen;20;81;
+Névtelen;69;195;

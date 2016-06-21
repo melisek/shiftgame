@@ -1,0 +1,30 @@
+                                        
+                                F       
+                                D       
+                                x       
+                                x       
+                                x       
+                               xxx      
+                               xxx      
+                             xxxxxxx    
+                             xxxxxxx    
+                            xxxxxxxxx   
+                            xxxxxxxxx   
+                            xxxxxxxxx   
+                            xxxxxxxxx   
+S                           xxxxxxxxx   
+xxxxxxxx                    xxxxxxxxx   
+xxxxxxxx                    xxxxxxxxx   
+xxxxxxxx                    xxxxxxxxx   
+xxxxxxxxDDDDDxxxxxxxxDDDDxxxxxxxxxxxxxxx
+xxxxxxxx     xxxxxxxx    xxxxxxxxxxxxxxx
+xxxxxxxx     xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxx     xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxx     xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxx     xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxx     xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxx     xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxx     xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxx*****xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

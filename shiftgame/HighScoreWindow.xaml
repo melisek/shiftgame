@@ -1,0 +1,41 @@
+﻿<Window x:Class="shiftgame.HighScoreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        Title="Ranglista - Shift Game" Height="351" Width="300" Background="Black" Loaded="Window_Loaded" Icon="Images/shiftgame-logo1x1.png">
+    <Grid>
+        <Grid.Resources>
+            <CollectionViewSource x:Key="cvs" Source="{Binding ElementName=comboboxLevelHighscores,Path=SelectedItem.Results}">
+                <CollectionViewSource.SortDescriptions>
+                    <scm:SortDescription PropertyName="EllapsedSeconds" />
+                    <scm:SortDescription PropertyName="Steps" />
+                </CollectionViewSource.SortDescriptions>
+            </CollectionViewSource>
+            <Style TargetType="{x:Type ListBox}">
+                <Style.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Black"/>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="Gray" />
+                </Style.Resources>
+            </Style>
+        </Grid.Resources>
+        <ListBox x:Name="listboxLevelHighscores" DataContext="{Binding}" ItemsSource="{Binding Source={StaticResource cvs}}" HorizontalAlignment="Left" Height="123" Margin="10,176,0,0" VerticalAlignment="Top" Width="256" Background="#FF212121" BorderBrush="#FF2E2E2E">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid d:DesignWidth="241" d:DesignHeight="33" Height="33">
+                        <Label Content="{Binding Player.Name}" Margin="0,0,119,0" Foreground="White" FontSize="16" FontFamily="Arial" FontWeight="SemiBold"/>
+                        <Label Content="{Binding EllapsedSeconds}" Margin="127,0,59,0" Foreground="White" FontSize="16" FontFamily="Arial" FontWeight="SemiBold"/>
+                        <Label Content="{Binding Steps}" Margin="187,0,0,0" Foreground="White" FontSize="16" FontFamily="Arial" FontWeight="SemiBold"/>
+                    </Grid>
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Játékos" HorizontalAlignment="Center" Margin="10,148,206,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Foreground="White" Width="76" IsHitTestVisible="False"/>
+        <Label Content="Pálya" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Arial" FontWeight="SemiBold"/>
+        <Image x:Name="imageLogo" HorizontalAlignment="Center" Height="100" Margin="74,9,74,0" VerticalAlignment="Top" Width="144" Source="Images/shiftgame-logo.png" />
+        <ComboBox x:Name="comboboxLevelHighscores" ItemStringFormat="Results.Level" HorizontalAlignment="Left" Margin="121,111,0,0" VerticalAlignment="Top" Width="145" Background="White" SelectedIndex="0"/>
+        <Label Content="Idő (mp)" HorizontalAlignment="Center" Margin="121,148,92,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Foreground="White" Width="79" IsHitTestVisible="False"/>
+        <Label Content="Lépés" HorizontalAlignment="Center" Margin="205,148,26,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Foreground="White" Width="61" IsHitTestVisible="False"/>
+    </Grid>
+</Window>

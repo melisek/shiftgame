@@ -1,0 +1,11 @@
+﻿<Window x:Class="shiftgame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shift Game" Height="300" Width="300" Background="Black" Icon="Images/shiftgame-logo1x1.png" Loaded="Window_Loaded">
+    <Grid>
+        <Image x:Name="imageLogo" HorizontalAlignment="Center" Height="100" Margin="0,9,0,0" VerticalAlignment="Top" Width="144" Source="Images/shiftgame-logo.png" />
+        <Button Content="Új játék" HorizontalAlignment="Center" Margin="0,155,0,0" VerticalAlignment="Top" Width="144" Background="White" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Click="Button_Click_NewGame"/>
+        <Button Content="Ranglista" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" Width="144" Background="White" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Click="Button_Click_HighScores"/>
+        <ComboBox x:Name="comboboxMapNumber" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Width="144" Background="White" SelectedIndex="0"/>
+    </Grid>
+</Window>

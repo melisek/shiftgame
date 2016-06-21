@@ -1,0 +1,8 @@
+Márk;19;68;
+Zoli;13;67;
+Névtelen;10;67;
+Gábor;10;66;
+Bence;13;66;
+Névtelen;10;66;
+Tomi;11;68;
+Márk;11;67;

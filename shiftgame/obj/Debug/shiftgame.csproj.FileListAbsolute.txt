@@ -1,0 +1,26 @@
+C:\Users\Mark\documents\visual studio 2013\Projects\shiftgame\shiftgame\bin\Debug\shiftgame.exe
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\bin\Debug\shiftgame.exe.config
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\bin\Debug\shiftgame.exe
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\bin\Debug\shiftgame.pdb
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame.csprojResolveAssemblyReference.cache
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\HighScoreWindow.baml
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\MainWindow.baml
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\LevelFinishedWindow.baml
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\App.baml
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\HighScoreWindow.g.cs
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\MainWindow.g.cs
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\LevelFinishedWindow.g.cs
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\GameWindow.g.cs
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\App.g.cs
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\GeneratedInternalTypeHelper.g.cs
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame_MarkupCompile.cache
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame_MarkupCompile.lref
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\GameWindow.baml
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame.g.resources
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame.Properties.Resources.resources
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame.csproj.GenerateResource.Cache
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame.exe
+d:\OE\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame.pdb
+\\ASPIRE-5755\Prog3\ff\ff-final\shiftgame\shiftgame\bin\Debug\shiftgame.exe.config
+\\ASPIRE-5755\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame.exe
+\\ASPIRE-5755\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\shiftgame.pdb

@@ -1,0 +1,15 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="shiftgame.LevelFinishedWindow"
+        Title="Szint teljesítve! - Shift Game" Height="216" Width="316" Background="Black" Loaded="Window_Loaded">
+    <Grid>
+        <Label x:Name="labelLevelCompletedTitle" Content="" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="272" Height="42" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Foreground="White" HorizontalContentAlignment="Center" IsManipulationEnabled="True"/>
+        <Label x:Name="labelLevelCompletedTime" Content="" HorizontalAlignment="Center" Margin="18,55,154,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Width="136" Foreground="White" IsHitTestVisible="False"/>
+        <Label x:Name="labelLevelCompletedSteps" Content="" HorizontalAlignment="Center" Margin="162,55,18,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Width="128" Foreground="White" IsHitTestVisible="False"/>
+        <Label Content="Név" HorizontalAlignment="Center" Margin="18,93,250,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Width="40" Foreground="White" IsHitTestVisible="False"/>
+        <TextBox x:Name="textboxLabelFinishedPlayer" HorizontalAlignment="Left" Height="23" Margin="72,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
+        <Button Content="Következő pálya" HorizontalAlignment="Left" Margin="18,142,0,0" VerticalAlignment="Top" Width="150" Background="White" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Click="Button_Click"/>
+        <Button Content="Menü" HorizontalAlignment="Left" Margin="223,142,0,0" VerticalAlignment="Top" Width="58" Background="White" FontSize="16" FontFamily="Arial" FontWeight="SemiBold" Click="Button_Click_1"/>
+    </Grid>
+</Window>

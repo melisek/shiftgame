@@ -1,0 +1,9 @@
+﻿<Window x:Class="shiftgame.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sajat="clr-namespace:shiftgame"
+        Title="Shift Game" Height="638" Width="815" Loaded="Window_Loaded" KeyDown="Window_KeyDown" Icon="Images/shiftgame-logo1x1.png">
+    <Grid x:Name="gridGame">
+        <sajat:MapFrameworkElement x:Name="mapFrameworkElement" KeyDown="mapFrameworkElement_KeyDown"   />
+    </Grid>
+</Window>
