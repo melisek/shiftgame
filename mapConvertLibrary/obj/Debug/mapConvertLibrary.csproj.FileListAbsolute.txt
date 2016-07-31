@@ -1,0 +1,5 @@
+C:\Users\Mark\Source\Repos\shiftgame-uj\mapConvertLibrary\bin\Debug\mapConvertLibrary.dll
+C:\Users\Mark\Source\Repos\shiftgame-uj\mapConvertLibrary\bin\Debug\mapConvertLibrary.pdb
+C:\Users\Mark\Source\Repos\shiftgame-uj\mapConvertLibrary\obj\Debug\mapConvertLibrary.dll
+C:\Users\Mark\Source\Repos\shiftgame-uj\mapConvertLibrary\obj\Debug\mapConvertLibrary.pdb
+C:\Users\Mark\Source\Repos\shiftgame-uj\mapConvertLibrary\obj\Debug\mapConvertLibrary.csprojResolveAssemblyReference.cache
