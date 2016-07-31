@@ -84,6 +84,7 @@
     <Compile Include="PlayerFigure.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Result.cs" />
+    <Compile Include="ValidateMapException.cs" />
     <Page Include="HighScoreWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,6 +174,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mapConvertLibrary\mapConvertLibrary.csproj">
+      <Project>{a541103c-dd54-4eb2-aada-44eb2bc70eb3}</Project>
+      <Name>mapConvertLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

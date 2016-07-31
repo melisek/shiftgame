@@ -9,17 +9,10 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Threading;
+using shiftgame.mapConverter;
 
 namespace shiftgame
 {
-    enum MapSector
-    {
-        Unoccupied, // szabad szektor
-        Occupied,   // foglalt szektor
-        Fatal,      // halálos szektor
-        Disappearing, // eltűnő szektor
-        Exit        // kijárat
-    }
     class LevelMap : Bindable
     {
         private MapSector[,] sectors; // pálya szektorai
@@ -93,11 +86,22 @@ namespace shiftgame
             // pálya txt beolvasás Resources-ból
             ResourceManager rm = new ResourceManager("shiftgame.Properties.Resources", Assembly.GetExecutingAssembly());
             string mapResource = rm.GetString("map_" + mapNumber);
-            string[] lines = mapResource.Split('\n');
 
-            sectors = new MapSector[lines.Length, lines[0].Length - 1];
+            bool validMap = MapConverter.ValidateMap(mapResource);
+
+            if (validMap)
+            {
+                sectors = MapConverter.ConvertBack(mapResource, 31, 40, SS, playerStartPoint, mapFinishPoint);
+                CreateMapStructure(false);
+            }
+            else
+                throw new ValidateMapException();
+                
+            //string[] lines = mapResource.Split('\n');
+
+            //sectors = new MapSector[lines.Length, lines[0].Length - 1];
             // sor
-            for (int i = 0; i < sectors.GetLength(0); i++)
+            /*for (int i = 0; i < sectors.GetLength(0); i++)
             {
                 // oszlop
                 for (int j = 0; j < sectors.GetLength(1); j++)
@@ -127,10 +131,25 @@ namespace shiftgame
                         mapFinishPoint = new Point(j * SS, i * SS);
                         sectors[i, j] = MapSector.Exit;
                     }
-                }
-            }
 
-            CreateMapStructure(false);
+                    /*switch (lines[i][j])
+                    {
+                        case 'x':
+                            sectors[i, j] = MapSector.Occupied; break;
+                        case '*':
+                            sectors[i, j] = MapSector.Fatal; break;
+                        case 'D':
+                            sectors[i, j] = MapSector.Disappearing; break;
+                        case 'S':
+                            playerStartPoint = new Point(j * SS, i * SS); break;
+                        case 'F':
+                            mapFinishPoint = new Point(j * SS, i * SS);sectors[i, j] = MapSector.Exit; break;
+
+                    }*/
+               // }
+            //}
+
+            
         }
 
         public void ShiftMapSectors()
