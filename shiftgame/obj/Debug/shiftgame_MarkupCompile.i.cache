@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-\\ASPIRE-5755\Prog3\ff\ff-final\shiftgame\shiftgame\obj\Debug\
+C:\Users\Mark\Source\Repos\shiftgame\shiftgame\obj\Debug\
 shiftgame
 none
 false
 DEBUG;TRACE
-\\ASPIRE-5755\Prog3\ff\ff-final\shiftgame\shiftgame\App.xaml
+C:\Users\Mark\Source\Repos\shiftgame\shiftgame\App.xaml
 4-727495519
 
-21-1336938318
-131478842535
+22-973664594
+14-391070914
 HighScoreWindow.xaml;MainWindow.xaml;LevelFinishedWindow.xaml;GameWindow.xaml;
 
 True

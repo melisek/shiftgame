@@ -38,10 +38,6 @@ namespace shiftgame.mapConverter
             return false;
         }
 
-        static public MapSector[,] ConvertBack(string s, int rowCnt, int colCnt, int sectorSize)
-        {
-            return DecompressMap(s, rowCnt, colCnt, sectorSize);
-        }
         static private void ReadMap(string filename)
         {
             try
@@ -135,9 +131,10 @@ namespace shiftgame.mapConverter
             }
             
             return (lineChCount == allChCount) ? newstr + LRC(newstr) : "";
+
         }
 
-        static private MapSector[,] DecompressMap(string s, int rowCnt, int colCnt, int sectorSize, out )
+        static public MapSector[,] DecompressMap(string s, int rowCnt, int colCnt, int sectorSize, ref Point playerStartPoint, ref Point mapFinishPoint)
         {
             MapSector[,] sectors = new MapSector[rowCnt, colCnt];
             int row = 0;
@@ -171,18 +168,15 @@ namespace shiftgame.mapConverter
                     {
                         case 'x':
                             sectorNum = 1; break;
-                        //sectors[row, col] = MapSector.Occupied; break;
                         case '*':
                             sectorNum = 2; break;
-                        //sectors[row, col] = MapSector.Fatal; break;
                         case 'D':
                             sectorNum = 3; break;
-                        //sectors[row, col] = MapSector.Disappearing; break;
-                        /*case 'S':
-                            playerStartPoint = new Point(j * sectorSize, i * sectorSize); break;*/
+                        case 'S':
+                            playerStartPoint = new Point(col * sectorSize, row * sectorSize); break;
                         case 'F':
-                            sectorNum = 4; break;
-                        //mapFinishPoint = new Point(j * sectorSize, i * sectorSize);sectors[i, j] = MapSector.Exit; break;
+                            sectorNum = 4;
+                            mapFinishPoint = new Point(col * sectorSize, row * sectorSize); break;
 
                     }
 

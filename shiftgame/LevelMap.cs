@@ -6,7 +6,8 @@ using System.Reflection;
 using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
+using Windows = System.Windows;
+using Point = System.Drawing.Point;
 using System.Windows.Media;
 using System.Windows.Threading;
 using shiftgame.mapConverter;
@@ -91,7 +92,7 @@ namespace shiftgame
 
             if (validMap)
             {
-                sectors = MapConverter.ConvertBack(mapResource, 31, 40, SS, playerStartPoint, mapFinishPoint);
+                sectors = MapConverter.DecompressMap(mapResource, 31, 40, SS, ref playerStartPoint, ref mapFinishPoint);
                 CreateMapStructure(false);
             }
             else
@@ -100,55 +101,6 @@ namespace shiftgame
             //string[] lines = mapResource.Split('\n');
 
             //sectors = new MapSector[lines.Length, lines[0].Length - 1];
-            // sor
-            /*for (int i = 0; i < sectors.GetLength(0); i++)
-            {
-                // oszlop
-                for (int j = 0; j < sectors.GetLength(1); j++)
-                {
-                    // elfoglalt szektor
-                    if (lines[i][j] == 'x')
-                    {
-                        sectors[i, j] = MapSector.Occupied;
-                    }
-                    // halálos szektor
-                    else if (lines[i][j] == '*')
-                    {
-                        sectors[i, j] = MapSector.Fatal;
-                    }
-                    else if (lines[i][j] == 'D')
-                    {
-                        sectors[i, j] = MapSector.Disappearing;
-                    }
-                    // start mező
-                    else if (lines[i][j] == 'S')
-                    {
-                        playerStartPoint = new Point(j * SS, i * SS);
-                    }
-                    // cél mező
-                    else if (lines[i][j] == 'F')
-                    {
-                        mapFinishPoint = new Point(j * SS, i * SS);
-                        sectors[i, j] = MapSector.Exit;
-                    }
-
-                    /*switch (lines[i][j])
-                    {
-                        case 'x':
-                            sectors[i, j] = MapSector.Occupied; break;
-                        case '*':
-                            sectors[i, j] = MapSector.Fatal; break;
-                        case 'D':
-                            sectors[i, j] = MapSector.Disappearing; break;
-                        case 'S':
-                            playerStartPoint = new Point(j * SS, i * SS); break;
-                        case 'F':
-                            mapFinishPoint = new Point(j * SS, i * SS);sectors[i, j] = MapSector.Exit; break;
-
-                    }*/
-               // }
-            //}
-
             
         }
 
@@ -174,28 +126,28 @@ namespace shiftgame
                         if (shiftMapSectors)
                             sectors[i, j] = MapSector.Unoccupied;
                         else
-                            mapSectors.Children.Add(new RectangleGeometry(new Rect(j * SS, i * SS, SS, SS)));
+                            mapSectors.Children.Add(new RectangleGeometry(new Windows.Rect(j * SS, i * SS, SS, SS)));
                     }
                     else if (shiftMapSectors && sectors[i, j] == MapSector.Unoccupied)
                     {
                         sectors[i, j] = MapSector.Occupied;
-                        mapSectors.Children.Add(new RectangleGeometry(new Rect(j * SS, i * SS, SS, SS)));
+                        mapSectors.Children.Add(new RectangleGeometry(new Windows.Rect(j * SS, i * SS, SS, SS)));
                     }
                     else if (sectors[i, j] == MapSector.Disappearing)
                     {
-                        disappearingSectors.Children.Add(new RectangleGeometry(new Rect(j * SS, i * SS, SS, SS)));
+                        disappearingSectors.Children.Add(new RectangleGeometry(new Windows.Rect(j * SS, i * SS, SS, SS)));
                     }
                     else if (sectors[i, j] == MapSector.Fatal)
                     {
                         PathFigure figure = new PathFigure(
-                            new Point(j * SS + 20, i * SS),
-                            new[] { new LineSegment(new Point(j * SS + SS, i * SS + SS), true), 
-                                        new LineSegment(new Point(j * SS, i * SS + SS), true)}, true);
+                            new Windows.Point(j * SS + 20, i * SS),
+                            new[] { new LineSegment(new Windows.Point(j * SS + SS, i * SS + SS), true), 
+                                        new LineSegment(new Windows.Point(j * SS, i * SS + SS), true)}, true);
                         fatalSectors.Children.Add(new PathGeometry(new[] { figure }));
                     }
                     else if (sectors[i, j] == MapSector.Exit)
                     {
-                        exitSector = new RectangleGeometry(new Rect(j * SS, i * SS, SS, SS));
+                        exitSector = new RectangleGeometry(new Windows.Rect(j * SS, i * SS, SS, SS));
                     }
                 }
             }

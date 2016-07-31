@@ -84,7 +84,7 @@ namespace shiftgame
                 stopper.Start();
             }
 
-            if (playerFigure.Sector == map.MapFinishPoint && levelFinishedEvent != null)
+            if (playerFigure.Sector.X == map.MapFinishPoint.X && PlayerFigure.Sector.Y == map.MapFinishPoint.Y && levelFinishedEvent != null)
             {
                 stopper.Stop();
                 timer.Stop();
